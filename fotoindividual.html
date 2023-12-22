@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álbum Personal</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        nav {
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ffcc00;
+            padding: 8px 15px;
+            border-radius: 5px;
+            background-color: #333;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: #555;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .photo-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .photo {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.photo img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+    display: block;
+}
+
+.photo:hover img {
+    transform: scale(1.1);
+}
+
+.photo p {
+    position: absolute;
+    top: 0; /* Cambiado de 'bottom: 0;' a 'top: 0;' */
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 204, 0, 0.8);
+    color: #333;
+    margin: 0;
+    border-radius: 0 0 8px 8px;
+    text-align: center;
+    font-size: 14px;
+}
+
+      
+        .reaction-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .reaction-buttons button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .reaction-buttons button:hover {
+            background-color: #555;
+        }
+
+        .like-counter,
+        .love-counter {
+            margin-top: 5px;
+            text-align: center;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="album.html">Volver al inicio</a>
+    </nav>
+
+    <section>
+        <h2>Mis Fotos Personales</h2>
+        <p>Explora momentos especiales capturados a lo largo de mi vida. Cada foto cuenta una historia única y preciosa.</p>
+
+        <div class="photo-container">
+            <div class="photo">
+                <img src="imagenes/Luem1.png" alt="Descripción de la Foto 1">
+                <p>Luem disfrutando su siesta</p>
+                <div class="reaction-buttons">
+                    <button onclick="likePhoto('photo1')">Me gusta</button>
+                    <button onclick="lovePhoto('photo1')">Me encanta</button>
+                </div>
+                <div class="like-counter" id="likeCounter_photo1">0 Me gusta</div>
+                <div class="love-counter" id="loveCounter_photo1">0 Me encanta</div>
+                
+            </div>
+
+            <div class="photo">
+                <img src="imagenes/Luem2.jpeg" alt="Descripción de la Foto 2">
+                <p>Luem durmiendo sin moverse</p>
+                <div class="reaction-buttons">
+                    <button onclick="likePhoto('photo1')">Me gusta</button>
+                    <button onclick="lovePhoto('photo1')">Me encanta</button>
+                </div>
+                <div class="like-counter" id="likeCounter_photo1">0 Me gusta</div>
+                <div class="love-counter" id="loveCounter_photo1">0 Me encanta</div>
+                
+            </div>
+
+            <div class="photo">
+                <img src="imagenes/Luem3.jpeg" alt="Descripción de la Foto 2">
+                <p>Luem sorprendida</p>
+                <div class="reaction-buttons">
+                    <button onclick="likePhoto('photo1')">Me gusta</button>
+                    <button onclick="lovePhoto('photo1')">Me encanta</button>
+                </div>
+                <div class="like-counter" id="likeCounter_photo1">0 Me gusta</div>
+                <div class="love-counter" id="loveCounter_photo1">0 Me encanta</div>
+                
+            </div>
+
+            <div class="photo">
+                <img src="imagenes/Luem4.jpeg" alt="Descripción de la Foto 2">
+                <p>Luem durmiendo sen brazos de papá</p>
+                <div class="reaction-buttons">
+                    <button onclick="likePhoto('photo1')">Me gusta</button>
+                    <button onclick="lovePhoto('photo1')">Me encanta</button>
+                </div>
+                <div class="like-counter" id="likeCounter_photo1">0 Me gusta</div>
+                <div class="love-counter" id="loveCounter_photo1">0 Me encanta</div>
+                
+            </div>
+
+            <div class="photo">
+                <img src="imagenes/Luem5.jpeg" alt="Descripción de la Foto 2">
+                <p>Luem despierta</p>
+                <div class="reaction-buttons">
+                    <button onclick="likePhoto('photo1')">Me gusta</button>
+                    <button onclick="lovePhoto('photo1')">Me encanta</button>
+                </div>
+                <div class="like-counter" id="likeCounter_photo1">0 Me gusta</div>
+                <div class="love-counter" id="loveCounter_photo1">0 Me encanta</div>
+                
+            </div>
+
+            <div class="photo">
+                <img src="imagenes/Luem6.jpeg" alt="Descripción de la Foto 2">
+                <p>Luem con el celular</p>
+                <div class="reaction-buttons">
+                    <button onclick="likePhoto('photo1')">Me gusta</button>
+                    <button onclick="lovePhoto('photo1')">Me encanta</button>
+                </div>
+                <div class="like-counter" id="likeCounter_photo1">0 Me gusta</div>
+                <div class="love-counter" id="loveCounter_photo1">0 Me encanta</div>
+                
+            </div>
+
+            <div class="photo">
+                <img src="imagenes/Luem7.jpeg" alt="Descripción de la Foto 2">
+                <p>Luem con el celular</p>
+                <div class="reaction-buttons">
+                    <button onclick="likePhoto('photo1')">Me gusta</button>
+                    <button onclick="lovePhoto('photo1')">Me encanta</button>
+                </div>
+                <div class="like-counter" id="likeCounter_photo1">0 Me gusta</div>
+                <div class="love-counter" id="loveCounter_photo1">0 Me encanta</div>
+                
+            </div>
+
+            <div class="photo">
+                <img src="imagenes/Luem8.jpeg" alt="Descripción de la Foto 2">
+                <p>Luem con el celular</p>
+                <div class="reaction-buttons">
+                    <button onclick="likePhoto('photo1')">Me gusta</button>
+                    <button onclick="lovePhoto('photo1')">Me encanta</button>
+                </div>
+                <div class="like-counter" id="likeCounter_photo1">0 Me gusta</div>
+                <div class="love-counter" id="loveCounter_photo1">0 Me encanta</div>
+                
+            </div>
+
+            <div class="photo">
+                <img src="imagenes/Luem22.jpeg" alt="Descripción de la Foto 2">
+                <p>Luem con su carrito</p>
+                <div class="reaction-buttons">
+                    <button onclick="likePhoto('photo1')">Me gusta</button>
+                    <button onclick="lovePhoto('photo1')">Me encanta</button>
+                </div>
+                <div class="like-counter" id="likeCounter_photo1">0 Me gusta</div>
+                <div class="love-counter" id="loveCounter_photo1">0 Me encanta</div>
+                
+            </div>
+
+            <div class="photo">
+                <img src="imagenes/Luem18.jpeg" alt="Descripción de la Foto 2">
+                <p>Luem con su mochila</p>
+                <div class="reaction-buttons">
+                    <button onclick="likePhoto('photo1')">Me gusta</button>
+                    <button onclick="lovePhoto('photo1')">Me encanta</button>
+                </div>
+                <div class="like-counter" id="likeCounter_photo1">0 Me gusta</div>
+                <div class="love-counter" id="loveCounter_photo1">0 Me encanta</div>
+                
+            </div>
+
+            <div class="photo">
+                <img src="imagenes/Luem19.jpeg" alt="Descripción de la Foto 2">
+                <p>Luem caminando de la mano de Papá</p>
+                <div class="reaction-buttons">
+                    <button onclick="likePhoto('photo1')">Me gusta</button>
+                    <button onclick="lovePhoto('photo1')">Me encanta</button>
+                </div>
+                <div class="like-counter" id="likeCounter_photo1">0 Me gusta</div>
+                <div class="love-counter" id="loveCounter_photo1">0 Me encanta</div>
+                
+            </div>
+
+            <!-- Agrega más fotos con descripciones según sea necesario -->
+
+        </div>
+
+        <p>¡Espero que disfrutes de esta pequeña ventana a mi vida a través de estas imágenes!</p>
+    </section>
+    <script>
+        function likePhoto(photoId) {
+            // Incrementa el contador de "Me gusta" para la foto correspondiente
+            var likeCounter = document.getElementById('likeCounter_' + photoId);
+            var currentLikes = parseInt(likeCounter.innerText);
+            likeCounter.innerText = (currentLikes + 1) + ' Me gusta';
+
+            // Puedes agregar la lógica adicional si es necesario
+        }
+
+        function lovePhoto(photoId) {
+            // Incrementa el contador de "Me encanta" para la foto correspondiente
+            var loveCounter = document.getElementById('loveCounter_' + photoId);
+            var currentLoves = parseInt(loveCounter.innerText);
+            loveCounter.innerText = (currentLoves + 1) + ' Me encanta';
+
+            // Puedes agregar la lógica adicional si es necesario
+        }
+    </script>
+</body>
+</html>
+</body>
+</html>

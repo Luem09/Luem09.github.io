@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="descripcion" content="Esta es la primera pagina web"> 
+    <title>Pagina de LUEM</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="shortcut icon" href="foto.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #e6e6e6;
+            color: #333;
+        }
+
+        #banner-container {
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        header {
+            position: relative;
+            text-align: center;
+            padding: 40px;
+            background-color: #798f8a; /* Cambia el color de fondo aquí */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        header h1 {
+            font-size: 60px;
+            color: #ffcc00;
+            margin-top: 20px;
+            animation: colorChange 5s infinite, glow 1s infinite;
+        }
+
+        @keyframes colorChange {
+            0%, 100% { color: #ffcc00; }
+            25% { color: #07ebb9; }
+            50% { color: #5c975c96; }
+            75% { color: #530808; }
+            100% { color: #145569; }
+        }
+
+        @keyframes glow {
+            0%, 100% { text-shadow: 0 0 10px #ffcc00; }
+            50% { text-shadow: 0 0 20px #ffcc00, 0 0 30px #ffcc00; }
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #044b458c;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .album-section {
+            text-align: center;
+            margin-top: 10px;
+            padding: 30px;
+            background-color: #798f8a; /* Cambia el color de fondo aquí */
+        }
+
+        #puzzle-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 20px;
+            
+           
+        }
+
+        .puzzle-piece {
+            flex: 0 0 calc(33.333% - 10px);
+            height: 0;
+            padding-bottom: 33.333%;
+            background-size: cover;
+            border-radius: 5px;
+            
+        }
+
+        .puzzle-piece:nth-child(odd) {
+            background-color: #ffffff;
+            
+        }
+
+        .puzzle-piece:nth-child(even) {
+            background-color: #eeeeee;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="banner-container">
+        <header>
+            <h1>LUEM RAYZEL</h1>
+        </header>
+    </div>
+
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="minacimiento.html">Biografía</a>
+        <a href="album.html">Álbum</a>
+        <a href="Comentarios.html">Comentarios</a>
+    </nav>
+
+    <div class="container">
+        <section class="album-section">
+            <h2>Álbum de Luem</h2>
+            <p>Descubre los momentos especiales con mi familia y yo.</p>
+
+            <div id="puzzle-container">
+                <!-- Cada pieza del rompecabezas es un div con la clase "puzzle-piece" -->
+                <div class="puzzle-piece" style="background-image: url('puzzle/piece4.png');"></div>
+                <div class="puzzle-piece" style="background-image: url('puzzle/piece2.png');"></div>
+                <div class="puzzle-piece" style="background-image: url('puzzle/piece6.png');"></div>
+                <div class="puzzle-piece" style="background-image: url('puzzle/piece1.png');"></div>
+                <div class="puzzle-piece" style="background-image: url('puzzle/piece5.png');"></div>
+                <div class="puzzle-piece" style="background-image: url('puzzle/piece3.png');"></div>
+                <!-- Agrega más piezas según sea necesario -->
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+
